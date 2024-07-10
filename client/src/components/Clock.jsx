@@ -36,7 +36,7 @@ function Clock() {
                         <div className='h-screen w-screen grid place-content-center '>
                                     <h1 className='text-center text-4xl lg:text-8xl '>Chettrapal  You have:-</h1>
                                     <p className='text-4xl text-center mt-4 bg-black text-white w-fit m-auto rounded-full px-4 py-2'>
-                                                {hoursLeft}h {minutesLeft}m {remainingSeconds}s left
+                                                {hoursLeft}h {minutesLeft}m {remainingSeconds}s 
                                     </p>
                         </div>
             );
