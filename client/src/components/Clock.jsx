@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Toaster, toast } from "react-hot-toast"
 
 function Clock() {
             // State to hold remaining time (seconds)
@@ -26,6 +27,10 @@ function Clock() {
                         return Math.floor(timeDiff / 1000);
             }
 
+            const handleClick = () => {
+                        toast.error("Bhai mat daba isse!💀");
+            }
+
             // Convert remaining seconds to hours, minutes, seconds
             const hoursLeft = Math.floor(secondsLeft / (60 * 60));
             const minutesLeft = Math.floor((secondsLeft % (60 * 60)) / 60);
@@ -34,8 +39,9 @@ function Clock() {
             // Display the countdown
             return (
                         <div className='h-screen w-screen grid place-content-center '>
+                                    <Toaster position='top-center' />
                                     <h1 className='text-center text-4xl lg:text-8xl '>Chettrapal  You have:-</h1>
-                                    <p className='text-4xl text-center mt-4 bg-black text-white w-fit m-auto rounded-full px-4 py-2'>
+                                    <p onClick={handleClick} className='text-4xl text-center mt-4 bg-black text-white w-fit m-auto rounded-full px-4 py-2 hover:bg-white hover:text-black hover:shadow-lg cursor-pointer'>
                                                 {hoursLeft}h {minutesLeft}m {remainingSeconds}s left
                                     </p>
                         </div>
