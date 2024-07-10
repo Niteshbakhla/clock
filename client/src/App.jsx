@@ -1,8 +1,11 @@
 import React from 'react'
+import Clock from './components/Clock'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Clock />
+    </div>
   )
 }
 
